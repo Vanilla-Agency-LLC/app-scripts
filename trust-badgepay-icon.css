@@ -1,0 +1,40 @@
+.tbpi-bar-wrapper {
+  text-align: center;
+}
+
+.separate-line .pay-icons-wrapper img, .separate-line .badges-wrapper img {
+  width: 75px;
+}
+
+.separate-line .badges-wrapper, .separate-line .pay-icons-wrapper {
+  margin-top: 15px;
+}
+
+.separate-line .pay-icons-wrapper > *:not(:first-child), .separate-line .badges-wrapper > *:not(:first-child) {
+  margin-left: 15px;
+}
+
+.tbpi-bar-wrapper.single-line {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center
+}
+
+.single-line .pay-icons-wrapper img, .single-line .badges-wrapper img {
+  width: 50px;
+}
+
+.single-line .badges-wrapper, .single-line .pay-icons-wrapper {
+  margin-top: 15px;
+}
+
+.single-line .pay-icons-wrapper > *:not(:first-child), .single-line .badges-wrapper > *:not(:first-child) {
+  margin-left: 12px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .tbpi-bar-wrapper.single-line {
+    display: block;
+  }
+}
