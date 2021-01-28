@@ -146,9 +146,9 @@ function getBarMessage(goalAmnt, cartAmount) {
   cartAmount = parseFloat(cartAmount);
 
   if (cartAmount === 0) {
-    return `${initialMsgBefore} ${currentCurrency}${goalAmnt} ${initialMsgAfter}`;
+    return `${initialMsgBefore} ${currentCurrency} ${goalAmnt} ${initialMsgAfter}`;
   } else if (goalAmnt > cartAmount) {
-    return `${progressMsgBefore} ${currentCurrency}${
+    return `${progressMsgBefore} ${currentCurrency} ${
       goalAmnt - cartAmount
     } ${progressMsgAfter}`;
   } else if (goalAmnt <= cartAmount) {
@@ -201,9 +201,11 @@ function updateFreeShippingBar(goalAmnt, cartAmount) {
   }
 
   const barMessage = getBarMessage(goalAmnt, cartAmount);
-  const freeShippingBarEle = document.querySelector('.free-shipping-bar');
-  if (freeShippingBarEle) {
-    freeShippingBarEle.firstChild.textContent = barMessage;
+  const freeShippingBarTextEle = document.querySelector(
+    '.free-shipping-bar .fsb-text'
+  );
+  if (freeShippingBarTextEle) {
+    freeShippingBarTextEle.textContent = barMessage;
   } else {
     setupFreeShippingBar(barMessage);
   }
@@ -254,6 +256,7 @@ function setupFreeShippingBar(message) {
 
   closeBtn.classList.add('vanilla-fsb-close-btn');
   freeShippingBar.classList.add('free-shipping-bar');
+  textContainer.classList.add('fsb-text');
 
   vanillaFSBEle = freeShippingBar;
 
