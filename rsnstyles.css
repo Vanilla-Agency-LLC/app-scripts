@@ -1,0 +1,50 @@
+.vanilla-rsn-wrapper {
+  position: fixed;
+  bottom: 100px;
+  z-index: 1000000000001;
+  padding: 15px;
+  left: -300px;
+  background: #FFFFFF;
+  width: 300px;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.vanilla-rsn-wrapper.show {
+  left: 30px;
+}
+
+.vanilla-rsn-container {
+  position: relative;
+  font-size: 14px;
+  color: #000000;
+}
+
+.vanilla-rsn-container .rsn-info-container {
+  display: flex;
+  align-items: center;
+  width: calc(100% - 15px);
+}
+
+.vanilla-rsn-container span {
+  margin-left: 10px;
+}
+
+.vanilla-rsn-container .rsn-product-image {
+  width: 65px;
+  height: auto;
+}
+
+.vanilla-rsn-container .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  font-size: 18px;
+  cursor: pointer;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
